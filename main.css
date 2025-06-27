@@ -1,0 +1,746 @@
+/* Reset dan Base Styles */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+    margin: 0; font-family: 'Inter', sans-serif;
+    background: #f0fdf4; color: #1f4a44;
+    font-size: 17px; line-height: 1.6;
+}
+
+/* Container utama */
+.container {
+    max-width: 1200px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #064e3b; /* Deep green for headings */
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: 3.75rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+p {
+    color: #1f4a44; /* Dark teal for paragraph text */
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    max-width: 600px;
+}
+
+/* Header and Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background: #ecfdf5; /* Light green header background */
+    z-index: 1000;
+    border-bottom: 1px solid #6ee7b7; /* Green border */
+    box-shadow: 0 2px 8px rgb(0 128 0 / 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 4.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: #064e3b; /* Deep green logo */
+    letter-spacing: -0.025em;
+    user-select: none;
+    cursor: default;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #047857; /* Mid green for nav links */
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    user-select: none;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #064e3b; /* Darker green on hover */
+    border-color: #064e3b;
+    outline-offset: 2px;
+    outline: none;
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.hero p {
+    margin: 0 auto 2rem auto;
+}
+
+.btn-group {
+    display: inline-flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: #047857; /* Mid green for primary button */
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #065f46; /* Darker green on hover */
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #064e3b; /* Deep green for secondary button text */
+    border: 2px solid #064e3b;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #064e3b;
+    color: white;
+    outline: none;
+}
+
+/* Metrics Card Section */
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.metric-card {
+    background: #ecfdf5; /* Light green card background */
+    padding: 2rem 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgb(0 128 0 / 0.05);
+    text-align: center;
+    user-select: none;
+    cursor: default;
+    transition: box-shadow 0.3s ease;
+}
+
+.metric-card:hover,
+.metric-card:focus-within {
+    box-shadow: 0 12px 18px rgb(0 128 0 / 0.08);
+    outline: none;
+}
+
+.metric-val {
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: #064e3b; /* Deep green for metric value */
+    margin-bottom: 0.25rem;
+    line-height: 1;
+}
+
+.metric-label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #1f4a44; /* Dark teal for labels */
+    letter-spacing: 0.1em;
+}
+
+/* Forum Posts */
+.forum-post {
+    background: #ecfdf5; /* Light green post background */
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 20px rgb(0 128 0 / 0.05);
+    transition: box-shadow 0.2s ease;
+    border-left: 4px solid transparent;
+}
+.forum-post:hover,
+.forum-post:focus-within {
+    border-left-color: #064e3b; /* Deep green border on hover */
+    box-shadow: 0 12px 25px rgb(0 128 0 / 0.09);
+    outline: none;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.author-avatar {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #10b981, #34d399); /* Green gradient for avatars */
+    border-radius: 9999px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.author-info h4 {
+    margin: 0;
+    color: #064e3b; /* Deep green for author name */
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.1;
+}
+
+.author-meta {
+    font-size: 0.875rem;
+    color: #1f4a44; /* Dark teal for meta text */
+    margin-top: 0.125rem;
+    user-select: none;
+}
+
+.post-badges {
+    margin-top: 0.3rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: #a7f3d0; /* Light green badge */
+    color: #065f46; /* Darker green badge text */
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    user-select: none;
+}
+.badge-helper {
+    background: #6ee7b7; /* Brighter green for helper badge */
+    color: #064e3b;
+}
+.badge-newcomer {
+    background: #d1fae5; /* Pale green for newcomer badge */
+    color: #047857;
+}
+
+.post-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #064e3b; /* Deep green for post title */
+    user-select: text;
+}
+
+.post-text {
+    font-size: 1.05rem;
+    color: #1f4a44; /* Dark teal for post text */
+    line-height: 1.5;
+    user-select: text;
+}
+
+.post-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #1f4a44; /* Dark teal for footer text */
+}
+
+.post-actions {
+    display: flex;
+    gap: 1.5rem;
+    user-select: none;
+}
+
+.action-btn {
+    color: #1f4a44; /* Dark teal for action buttons */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    user-select: none;
+}
+.action-btn:hover,
+.action-btn:focus {
+    color: #064e3b; /* Deep green on hover */
+    outline: none;
+}
+#map {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #ccc;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 4rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-header {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #064e3b; /* Deep green for FAQ header */
+}
+
+.faq-item {
+    background: #ecfdf5; /* Light green FAQ background */
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 15px rgb(0 128 0 / 0.05);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.faq-item:focus-within,
+.faq-item:hover {
+    box-shadow: 0 10px 25px rgb(0 128 0 / 0.1);
+    outline: none;
+}
+
+.faq-question {
+    background: #d1fae5; /* Pale green for FAQ question */
+    padding: 1.25rem 1.75rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    width: 100%;
+    color: #064e3b; /* Deep green for question text */
+    transition: background-color 0.25s ease;
+}
+
+.faq-question:hover,
+.faq-question:focus {
+    background-color: #6ee7b7; /* Brighter green on hover */
+    outline-offset: 2px;
+    outline: 2px solid #064e3b;
+}
+
+.faq-answer {
+    padding: 0 1.75rem 1.5rem 1.75rem;
+    font-size: 1rem;
+    color: #1f4a44; /* Dark teal for answer text */
+    line-height: 1.5;
+    display: none;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+/* Chat Panel */
+aside.chat-panel {
+    max-width: 400px;
+    margin: 6rem auto 4rem;
+    background: #ecfdf5; /* Light green chat panel */
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 30px rgba(0, 128, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    height: 580px;
+    user-select: none;
+}
+
+.chat-header {
+    background: #047857; /* Mid green for chat header */
+    color: white;
+    padding: 1.5rem 2rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.03em;
+    user-select: none;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: #1f4a44; /* Dark teal for messages */
+    font-size: 1rem;
+    user-select: text;
+    scroll-behavior: smooth;
+}
+
+.chat-message {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    user-select: text;
+}
+
+.message-avatar {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    background: linear-gradient(45deg, #10b981, #34d399); /* Green gradient for message avatars */
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.1);
+}
+
+.message-content {
+    background: #d1fae5; /* Pale green for message bubbles */
+    border-radius: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    max-width: 75%;
+    line-height: 1.45;
+    position: relative;
+    user-select: text;
+    box-shadow: 0 2px 6px rgba(0, 128, 0, 0.07);
+    word-break: break-word;
+}
+
+.message-author {
+    font-weight: 600;
+    color: #059669; /* Bright green for author names */
+    margin-bottom: 0.3rem;
+    user-select: none;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: #6b7280; /* Kept neutral gray for time to maintain readability */
+    margin-top: 0.15rem;
+    user-select: none;
+}
+
+.chat-input {
+    padding: 1.25rem 2rem;
+    border-top: 1px solid #6ee7b7; /* Green border for input section */
+    background-color: #ecfdf5; /* Light green background */
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.chat-input form {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    font-size: 1rem;
+    padding: 0.8rem 1.25rem;
+    border-radius: 9999px;
+    border: 1.5px solid #6ee7b7;
+    transition: border-color 0.3s ease;
+    outline-offset: 3px;
+    font-family: inherit;
+}
+
+.chat-input input[type="text"]:focus {
+    border-color: #059669;
+    outline: none;
+    box-shadow: 0 0 8px #34d399aa;
+}
+
+.send-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: #047857;
+    color: white;
+    border-radius: 9999px;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: transform 0.2s ease;
+    user-select: none;
+}
+
+.send-btn:hover,
+.send-btn:focus {
+    background-color: #065f46;
+    transform: scale(1.1);
+    outline: none;
+}
+
+/* Forms */
+.auth-form {
+    background: #ecfdf5;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0, 128, 0, 0.05);
+    max-width: 400px;
+    margin: 3rem auto;
+    text-align: left;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #064e3b;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1f4a44;
+    font-size: 0.95rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: 1.5px solid #6ee7b7;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form input[type="text"]:focus,
+.auth-form input[type="email"]:focus,
+.auth-form input[type="password"]:focus,
+.auth-form textarea:focus {
+    border-color: #059669;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+}
+
+.auth-form button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #047857;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.auth-form button[type="submit"]:hover {
+    background-color: #065f46;
+    transform: translateY(-2px);
+}
+
+.auth-form .message {
+    text-align: center;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #ef4444;
+}
+.auth-form .message.success {
+    color: #059669;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.text-center a {
+    color: #047857;
+    text-decoration: none;
+    font-weight: 600;
+}
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* New Post Form */
+.new-post-form {
+    background: #ecfdf5;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 128, 0, 0.05);
+    margin-bottom: 2.5rem;
+}
+
+.new-post-form h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #064e3b;
+}
+
+.new-post-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1f4a44;
+}
+
+.new-post-form input[type="text"],
+.new-post-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: 1.5px solid #6ee7b7;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.new-post-form button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    background-color: #047857;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-post-form button[type="submit"]:hover {
+    background-color: #065f46;
+}
+/* Comments section within forum post */
+.comments-section {
+    margin-top: 1.5rem;
+    border-top: 1px dashed #a7f3d0;
+    padding-top: 1.5rem;
+}
+
+.comment-item {
+    background-color: #f6fff9;
+    border-left: 3px solid #6ee7b7;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 5px rgba(0, 128, 0, 0.03);
+}
+
+.comment-author {
+    font-weight: 700;
+    color: #064e3b;
+    font-size: 0.95rem;
+}
+
+.comment-meta {
+    font-size: 0.8rem;
+    color: #1f4a44;
+    margin-left: 0.5rem;
+}
+
+.comment-text {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #1f4a44;
+}
+.comment-form-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dotted #a7f3d0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .metrics {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    nav ul {
+        gap: 1.25rem;
+        font-size: 0.9rem;
+    }
+    main {
+        padding-left: 1rem; padding-right: 1rem;
+        max-width: 100%;
+    }
+    aside.chat-panel {
+        width: 90vw;
+        height: 400px;
+        margin: 3rem auto 5rem auto;
+    }
+}
